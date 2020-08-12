@@ -22,9 +22,9 @@ def mapper(thefn):
     for hrow in grid:
         boondoggle.append(hrow)       
     colorarray = numpy.array(boondoggle)
-    fig.imshow(colorarray)
+    fig.imshow(colorarray, cmap='plasma')
     savefn = thefn + ".png"
-    plt.savefig(savefn,  transparent=True)
+    fig.savefig(savefn,  transparent=True)
 
 while(True):
     newfn = uuid.uuid5
